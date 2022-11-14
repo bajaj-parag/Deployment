@@ -40,7 +40,7 @@ claimants = claimants.dropna()
 X = claimants.iloc[:,[1,2,3,4,5]]
 Y = claimants.iloc[:,0]
 clf = LogisticRegression()
-clf.fit()
+clf.fit(X,Y)
 
 prediction = clf.predict(df)
 prediction_proba= clf.predict_proba(df)
